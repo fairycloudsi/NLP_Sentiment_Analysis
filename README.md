@@ -13,7 +13,7 @@ We use GloVe as a pretrained layer to map each word in the sentence to a vector 
 
 ### Neural Networks 
 We transfor each sentence to vector by pretrained layer GloVe. A dense neural networks is built with input dimenstion 50, hidden layers with 50 neurons and output dimension 5. The loss is categorical crossentropy and optimizer is adam. After 500 epochs training, we achieved accuracy 1.00 for training data and 0.8571 for validating data. From the figure, it is overfitting. 
-![NN Performance](/pic/performance_nn.png)
+![NN Performance](/pic/performance_NN.png)
 For details, check [sentiment analysis 2.](sentiment_analysis_p2_Huiwen.ipynb)
 
 One specific problem is this model cannot predict the sentence "I dont't like it" correctly since it ignore the negative word "not". The right label for this sentence is emoji "disappointed" while the predicted label is "smile". 
@@ -42,7 +42,7 @@ The model has a lot of parameters but fortunately 20,000,050 of them is non-trai
 
 After 100 epochs training, we reach 0.9773 accuracy for 132 training data and 0.8393 for 56 validation data. By this model, we sucessfully get rid of overfitting issue. 
 
-![LSTM Performance](/pic/performance_lstm.png)
+![LSTM Performance](/pic/performance_LSTM.png)
 
 The benefits of LSTM model is as follows. 
 * Successfully get rid of overfitting issue by using 4 dropout. 
